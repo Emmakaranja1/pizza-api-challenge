@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "Pizza Restaurant API",
+    "_postman_id": "your-uuid-here",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Restaurants",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/restaurants"
+      }
+    },
+    {
+      "name": "Get Restaurant with Pizzas",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/restaurants/1"
+      }
+    },
+    {
+      "name": "Delete a Restaurant",
+      "request": {
+        "method": "DELETE",
+        "url": "http://127.0.0.1:5000/restaurants/1"
+      }
+    },
+    {
+      "name": "Get All Pizzas",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/pizzas"
+      }
+    },
+    {
+      "name": "Create Restaurant Pizza",
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:5000/restaurant_pizzas",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"price\": 15,\n  \"restaurant_id\": 1,\n  \"pizza_id\": 2\n}"
+        },
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    }
+  ]
+}
